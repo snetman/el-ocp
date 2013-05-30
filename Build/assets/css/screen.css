@@ -522,6 +522,7 @@ hr {
   float: left;
   margin-right: 6px;
   width: 48px;
+  /* Limit the width and height so we only see the "E" symbol */
   height: 36px;
   background: transparent url(../img/el-logo.png) left top no-repeat;
   text-indent: 100%;
@@ -531,6 +532,7 @@ hr {
     .el-logo {
       float: none;
       width: 162px;
+      /* Expose the full EL logo */
       height: 102px;
       margin-bottom: 2rem;
       position: relative;
@@ -548,7 +550,8 @@ hr {
   margin-bottom: 0;
   -webkit-font-smoothing: antialiased; }
   .site-title .mobile-hidden {
-    display: none; }
+    display: none;
+    /* Hide everything except "Common Core Success" on mobile */ }
   @media screen and (min-width: 37.5em) {
     .site-title {
       font-size: 2.25rem;
@@ -562,7 +565,11 @@ hr {
       .site-title:last-child {
         margin-right: 0; }
       .site-title .mobile-hidden {
-        display: inline; } }
+        display: inline;
+        /* Show the full title statement */ }
+      .site-title:after {
+        content: '.';
+        /* Add a period at the end of the sentence */ } }
   @media screen and (min-width: 61.25em) {
     .site-title {
       display: block;
@@ -661,12 +668,14 @@ hr {
 #menu-link {
   text-decoration: none; }
   #menu-link .open {
-    display: block; }
+    display: block;
+    /* Show the hamburger and hide the X */ }
   #menu-link .close {
     display: none; }
 
 #menu-link.active .open {
-  display: none; }
+  display: none;
+  /* Show the X and hide the hamburger */ }
 #menu-link.active .close {
   display: block; }
 

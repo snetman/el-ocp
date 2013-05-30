@@ -52,7 +52,7 @@
 .el-logo {
     float: left;
     margin-right: $base-xs;
-    width: 48px;
+    width: 48px; /* Limit the width and height so we only see the "E" symbol */
     height: 36px;
     background: transparent url('../img/el-logo.png') left top no-repeat;
     text-indent: 100%;
@@ -63,7 +63,7 @@
     
     @include media($q-tablet) {
         float: none;
-        width: 162px;
+        width: 162px; /* Expose the full EL logo */
         height: 102px;
         margin-bottom: 2rem;
         position: relative;
@@ -82,7 +82,7 @@
     margin-bottom: 0;
     -webkit-font-smoothing: antialiased;
     .mobile-hidden {
-        display: none;
+        display: none; /* Hide everything except "Common Core Success" on mobile */
     }
     
     // Breakpoints
@@ -92,7 +92,10 @@
     	line-height: 2.625rem; /* 42px */
     	@include span-columns(11);
     	.mobile-hidden {
-        	display: inline;
+        	display: inline; /* Show the full title statement */
+    	}
+    	&:after {
+        	content: '.'; /* Add a period at the end of the sentence */
     	}
     }
 
@@ -144,8 +147,6 @@
     
     @include media($q-tablet) {
         background-color: transparent;
-        // font-size: 1rem;
-        // line-height: 1.5rem;
         font-size: 1.5rem;
         line-height: 1.75rem;
         > li {
@@ -215,7 +216,7 @@
 #menu-link {
     text-decoration: none;
     .open {
-        display: block;
+        display: block; /* Show the hamburger and hide the X */
     }
     .close {
         display: none;
@@ -223,7 +224,7 @@
 }
 #menu-link.active {
     .open {
-        display: none;
+        display: none; /* Show the X and hide the hamburger */
     }
     .close {
         display: block;
