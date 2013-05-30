@@ -1,0 +1,101 @@
+.pagination {
+    margin: 0 0 $base 0;
+}
+
+.pagination ul {
+    display: inline-block;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.pagination ul > li {
+    display: inline;
+}
+
+.pagination ul > li > a,
+.pagination ul > li > span {
+    float: left; 
+    padding: 0 1em;
+    font-family: $button-font-family;
+    line-height: 44px;
+    text-decoration: none;
+    background-color: $verylightgray;
+    border: $borderwidth $borderstyle $bordercolor;
+    border-left-width: 0;
+    color: $linkcolor;
+}
+
+.pagination ul > li > a:hover {
+    background-color: $white;
+    color: $black;
+}
+
+.pagination ul > .active > a,
+.pagination ul > .active > span {
+    background-color: $white;
+    color: $black;
+    text-decoration: none;
+    cursor: default;
+}
+
+.pagination ul > .active > a:hover {
+    background-color: $white;
+}
+
+.pagination ul > .disabled > span,
+.pagination ul > .disabled > a,
+.pagination ul > .disabled > a:hover {
+    background-color: transparent;
+    color: $lightgray;
+    cursor: default;
+}
+
+.pagination ul > li:first-child > a,
+.pagination ul > li:first-child > span {
+    // background-color: $paginationendbackgroundcolor;
+    border-left-width: 1px;
+    border-top-left-radius: $buttonborderradius; 
+    border-bottom-left-radius: $buttonborderradius;
+    // color: $paginationendcolor;
+}
+
+.pagination ul > li:last-child > a,
+.pagination ul > li:last-child > span {
+    // background-color: $paginationendbackgroundcolor;
+    border-top-right-radius: $buttonborderradius; 
+    border-bottom-right-radius: $buttonborderradius; 
+    // color: $paginationendcolor;
+}
+
+// alignment
+
+.pagination-centered {
+    text-align: center;
+}
+.pagination-right {
+    text-align: right;
+}
+
+// sizes
+
+.pagination-large {
+    ul > li > a,
+    ul > li > span {
+        font-size: 1.5em;
+    }
+}
+.pagination-small {
+    ul > li > a,
+    ul > li > span {
+        font-size: .75em;
+        line-height: 33px;
+    }
+}
+.pagination-mini {
+    ul > li > a,
+    ul > li > span {
+        font-size: .5em;
+        line-height: 22px;
+    }
+}

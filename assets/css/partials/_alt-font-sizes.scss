@@ -1,0 +1,70 @@
+/* block level */
+
+h1, .alpha { 
+	font-size: 4rem; /* 64px */
+	font-family: $headline-text;
+	font-weight: 400;
+	line-height: 4.5rem; /* 72px */
+	margin-bottom: 1.5rem; /* 24px */
+}
+
+h2, .beta {
+	font-size: 2.25rem; /* 32px */
+	font-family: $headline-text;
+	font-weight: $headline-font-weight; 
+	margin-bottom: 1.5rem; /* 24px */
+	color: $red;
+}
+
+h3, .gamma {
+	font-size: 1.5rem; /* 24px */ 
+	font-family: $headline-text; 
+	font-weight: $headline-font-weight; 
+	margin-bottom: .75rem; /* 12px */
+	color: $black;
+}
+
+h4, .delta {
+	font-size: 1rem; 
+	font-family: $headline-text; 
+	font-weight: $headline-font-weight; 
+	text-transform: uppercase; 
+	margin-bottom: em(12,20);
+	color: $black;
+}
+
+h5, .epsilon {
+	font-size: 20px; font-size: em(20,16); 
+	font-family: $body-text; 
+	font-weight: $headline-font-weight; 
+	margin-bottom: em(12,20);
+}
+
+h6, .zeta {
+	font-size: 18px; font-size: em(18,16); 
+	font-family: $headline-text; 
+	font-weight: $headline-font-weight; 
+	margin-bottom: em(12,18);
+}
+
+p, ul, dl, ol { 
+	font-size: $base-font-rem;
+	line-height: $base-line-height;
+	margin-bottom: 1.5rem; /* 24px */
+}
+
+li {
+	margin-bottom: .75rem; /* 12px */
+}
+
+ul {
+    li {
+        list-style-type: disc;
+    }
+}
+
+ol {
+	li {
+		margin-left: $gutter;
+	}
+}
