@@ -7,30 +7,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 
 <head>
-
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      	
-<title>EL OCP: Header mockup</title>
+<title>EL OCP: Header and Footer Prototype</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="cleartype" content="on">
@@ -114,19 +91,7 @@
 	</div>
 </footer>
 
-<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-		 chromium.org/developers/how-tos/chrome-frame-getting-started -->
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-
 <script src='assets/js/jquery-1.9.1.min.js'></script>
-<script src='assets/js/bootstrap.min.js'></script>
-<script src='assets/js/functions.js'></script>
-
-<script>
-var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-s.parentNode.insertBefore(g,s)}(document,'script'));
-</script> 
+<script src='assets/js/functions.js'></script> 
 </body>
 </html>
